@@ -12,3 +12,4 @@ while(True):
             bal-=1
     print('Case {cou}: {bal}'.format(cou = count,bal = bal))
     count+=1
+    
