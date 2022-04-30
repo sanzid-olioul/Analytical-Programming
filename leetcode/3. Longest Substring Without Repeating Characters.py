@@ -6,7 +6,7 @@ class Solution:
             if st in lst:
                 if len(lst) > ln:
                     ln = len(lst)
-                lst.clear()
+                lst= lst[lst.index(st)+1:]
                 lst.append(st)
             else:
                 lst.append(st)
