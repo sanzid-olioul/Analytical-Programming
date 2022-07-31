@@ -4,16 +4,18 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        maxdepth = 0
         def find_def(node):
-            nonlocal maxdepth
-            if not node:
+            if node == None:
                 return 0
+            
+            
             l = find_def(node.left) +1
             r = find_def(node.right)+1
             maxdepth = max(l,r)
-        find_def(root)
-        return maxdepth
+            return maxdepth
+        
+        return find_def(root)
 
